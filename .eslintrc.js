@@ -1,14 +1,17 @@
 module.exports = {
   root: true,
   env: {
+    es6: true,
     browser: true,
-    es2021: true,
     node: true
   },
   extends: ['plugin:prettier/recommended'],
   plugins: ['prettier'],
   parserOptions: {
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   rules: {
     'prettier/prettier': 'warn',
