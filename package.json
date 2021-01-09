@@ -80,10 +80,10 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier -c --write \"src/**/*.{js,jsx}\""
+      "prettier -c --write"
     ],
     "*.{css,scss,less}": [
-      "stylelint --fix \"src/**/*.{css,scss,less}\""
+      "stylelint --fix"
     ]
   },
   "engines": {
