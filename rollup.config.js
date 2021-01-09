@@ -22,9 +22,10 @@ const _ = require('lodash')
 
 const isDev = process.env.NODE_ENV === 'development'
 
-const filename = pkg.browser.slice(
-  pkg.browser.indexOf('/') + 1,
-  pkg.browser.indexOf('.')
+const umdFileName = pkg['umd:main']
+const filename = umdFileName.slice(
+  umdFileName.indexOf('/') + 1,
+  umdFileName.indexOf('.')
 )
 
 const out = [
@@ -37,7 +38,7 @@ const out = [
     format: 'esm'
   },
   {
-    file: pkg.browser,
+    file: umdFileName,
     format: 'umd',
     name: _.upperFirst(_.camelCase(filename))
   }

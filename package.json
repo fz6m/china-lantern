@@ -4,8 +4,8 @@
   "description": "website chinese new year lantern pendant",
   "author": "fz6m",
   "main": "dist/china-lantern.cjs.js",
-  "browser": "dist/china-lantern.js",
   "module": "dist/china-lantern.esm.js",
+  "umd:main": "dist/china-lantern.js",
   "unpkg": "dist/china-lantern.min.js",
   "jsdelivr": "dist/china-lantern.min.js",
   "homepage": "https://github.com/fz6m/china-lantern",
@@ -85,6 +85,9 @@
     "*.{css,scss,less}": [
       "stylelint --fix \"src/**/*.{css,scss,less}\""
     ]
+  },
+  "engines": {
+    "node": ">=10.0.0"
   },
   "license": "MIT"
 }
