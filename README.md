@@ -2,7 +2,7 @@
 
 新年新气象，网站中国新年灯笼挂件
 
-*version: 1.3*
+*version: 1.4*
 
 ### 效果
 
@@ -16,7 +16,7 @@
 <body>
 
   <!-- 在页面最后引入 -->
-  <script src="https://cdn.jsdelivr.net/gh/fz6m/china-lantern@1.3/dist/china-lantern.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fz6m/china-lantern@1.4/dist/china-lantern.min.js"></script>
 
 </body>
 ```

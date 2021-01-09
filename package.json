@@ -33,7 +33,7 @@
     "release-as": "standard-version",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "changelog-all": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "pre-publish": "yarn release && yarn changelog-all"
+    "pre-publish": "yarn release && yarn changelog-all && yarn build"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
