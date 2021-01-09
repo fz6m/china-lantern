@@ -1,3 +1,7 @@
+# [1.6.0](https://github.com/fz6m/china-lantern/compare/v1.5.0...v1.6.0) (2021-01-09)
+
+
+
 # [1.5.0](https://github.com/fz6m/china-lantern/compare/v1.4.0...v1.5.0) (2021-01-09)
 
 
