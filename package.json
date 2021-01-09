@@ -1,6 +1,6 @@
 {
   "name": "china-lantern",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "website chinese new year lantern pendant",
   "author": "fz6m",
   "main": "dist/china-lantern.cjs.js",
