@@ -2,7 +2,7 @@
 
 新年新气象，网站中国新年灯笼挂件
 
-*version: 1.6*
+_version: 1.6_
 
 ### 效果
 
@@ -12,32 +12,53 @@
 
 ### 使用
 
+##### HTML
+
 ```html
-<body>
+  <body>
+    <!-- 在页面最后引入 -->
+    <script src="https://cdn.jsdelivr.net/gh/fz6m/china-lantern@1.6/dist/china-lantern.min.js"></script>
+  </body>
+```
 
-  <!-- 在页面最后引入 -->
-  <script src="https://cdn.jsdelivr.net/gh/fz6m/china-lantern@1.6/dist/china-lantern.min.js"></script>
+##### PHP
 
-</body>
+```php
+  <?php
+    date_default_timezone_set('PRC');
+
+    $year = date("Y");
+    $month = date("n");
+    $day = intval(date("d"));
+
+    $is_current_year = $year == 2021;
+    $is_new_year_day = $month == 1 && $day < 4; // 1.1 ~ 1.3
+    $is_spring_festival = $month == 2 && $day > 9 && $day < 27; // 2.10 ~ 2.26
+    $is_show = $is_new_year_day || $is_spring_festival;
+
+    if($is_current_year && $is_show) {
+        echo '<script src="https://cdn.jsdelivr.net/gh/fz6m/china-lantern@1.6/dist/china-lantern.min.js"></script>';
+    }
+  ?>
 ```
 
 ### 开发
 
 1. 安装依赖
 
-    ```bash
-      yarn
-    ```
+   ```bash
+     yarn
+   ```
 
 2. 在 `./src/styles` 自定义样式，在 `./build/minifier.js` 自定义灯笼文字
 
 3. 构建
 
-    ```bash
-      yarn build
-    ```
-    
-    之后就可以在 `./dist/china-lantern.min.js` 得到你的自定义脚本
+   ```bash
+     yarn build
+   ```
+
+   之后就可以在 `./dist/china-lantern.min.js` 得到你的自定义脚本
 
 ### 其他
 
@@ -46,20 +67,20 @@
 挂钩类：`.j-china-lantern`
 
 ```css
-  /* 灯笼默认的 z-index: 999; */
+/* 灯笼默认的 z-index: 999; */
 
-  /* 提高灯笼的层级 */
-  .j-china-lantern .lantern__warpper {
-    z-index:9999;
-  }
+/* 提高灯笼的层级 */
+.j-china-lantern .lantern__warpper {
+  z-index: 9999;
+}
 
-  /* 提高单个灯笼的层级：左灯笼 */
-  .j-china-lantern .lantern__warpper:not(.lantern__secondary) {
-    z-index:9999;
-  }
+/* 提高单个灯笼的层级：左灯笼 */
+.j-china-lantern .lantern__warpper:not(.lantern__secondary) {
+  z-index: 9999;
+}
 
-  /* 提高单个灯笼的层级：右灯笼 */
-  .j-china-lantern .lantern__secondary {
-    z-index:9999;
-  }
+/* 提高单个灯笼的层级：右灯笼 */
+.j-china-lantern .lantern__secondary {
+  z-index: 9999;
+}
 ```
